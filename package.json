@@ -2,16 +2,11 @@
   "name": "lbr-env",
   "version": "1.0.0",
   "description": "Semplice funzione per gestire le versioni del progetto!!!",
-  "repository": "lbr-env",
   "main": "index.js",
   "bin": {
     "lbr-scripts": "./bin/lbr-scripts.js"
   },
   "scripts": {
-    "lint": "xo \"*.js\" \"bin/*.js\"",
-    "lint:fix": "npm run lint -s -- --fix",
-    "test": "npm run lint -s",
-    "release:check": "semantic-release --dry-run",
     "write:env": "node index.js"
   },
   "keywords": [
@@ -32,38 +27,17 @@
   "bugs": {
     "url": "https://github.com/Liberdesign/lbr-env/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Liberdesign/lbr-env.git"
+  },
   "dependencies": {
     "chalk": "^4.1.0",
     "fs-extra": "^10.0.0",
     "minimist": "^1.2.5"
   },
-  "devDependencies": {
-    "semantic-release": "^19.0.2",
-    "semantic-release-npm-github": "^3.0.0",
-    "xo": "^0.53.1"
-  },
   "engines": {
     "node": ">=14.0.0"
-  },
-  "xo": {
-    "space": true,
-    "prettier": true,
-    "rules": {
-      "unicorn/no-array-reduce": "off",
-      "unicorn/prefer-module": "off",
-      "unicorn/no-array-for-each": "off",
-      "unicorn/prefer-object-from-entries": "off",
-      "complexity": "off",
-      "unicorn/prefer-node-protocol": "off",
-      "unicorn/switch-case-braces": "off"
-    }
-  },
-  "prettier": {
-    "trailingComma": "none"
-  },
-  "release": {
-    "extends": "semantic-release-npm-github",
-    "branches": "main"
   },
   "files": [
     "index.js",
