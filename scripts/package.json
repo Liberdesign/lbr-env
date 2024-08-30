@@ -1,0 +1,72 @@
+{
+  "name": "lbr-env",
+  "version": "1.0.0",
+  "description": "Semplice funzione per gestire le versioni del progetto!!!",
+  "repository": "lbr-env/scripts",
+  "main": "index.js",
+  "bin": {
+    "lbr-scripts": "./bin/lbr-scripts"
+  },
+  "scripts": {
+    "lint": "xo \"*.js\" \"bin/*.js\"",
+    "lint:fix": "npm run lint -s -- --fix",
+    "test": "npm run lint -s",
+    "release:check": "semantic-release --dry-run"
+  },
+  "keywords": [
+    "angular",
+    "cli",
+    "enterprise",
+    "tool",
+    "support",
+    "scripts",
+    "project"
+  ],
+  "author": {
+    "name": "Jackson",
+    "url": "https://www.liberdesign.eu"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ngx-rocket/scripts",
+  "bugs": {
+    "url": "https://github.com/ngx-rocket/scripts/issues"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs-extra": "^10.0.0",
+    "lodash.get": "^4.4.2",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "semantic-release": "^19.0.2",
+    "semantic-release-npm-github": "^3.0.0",
+    "xo": "^0.53.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "rules": {
+      "unicorn/no-array-reduce": "off",
+      "unicorn/prefer-module": "off",
+      "unicorn/no-array-for-each": "off",
+      "unicorn/prefer-object-from-entries": "off",
+      "complexity": "off",
+      "unicorn/prefer-node-protocol": "off",
+      "unicorn/switch-case-braces": "off"
+    }
+  },
+  "prettier": {
+    "trailingComma": "none"
+  },
+  "release": {
+    "extends": "semantic-release-npm-github",
+    "branches": "main"
+  },
+  "files": [
+    "index.js",
+    "bin"
+  ]
+}
