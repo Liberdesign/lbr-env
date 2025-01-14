@@ -57,6 +57,7 @@ class LbrScriptsCli {
     }
 
     try {
+      fs.ensureFileSync(outputFile);
       fs.writeFileSync(outputFile, env);
       console.log(`${chalk.green('Variabili di ambiente scritte in')} ${chalk.cyan(outputFile)}`);
     } catch (error) {
